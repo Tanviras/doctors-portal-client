@@ -1,0 +1,16 @@
+<main> tag
+spacing classes(https://getbootstrap.com/docs/5.0/utilities/spacing/)
+offsetting-columns(https://getbootstrap.com/docs/5.0/layout/columns/#offsetting-columns)
+responsive image: image fluid(https://getbootstrap.com/docs/5.0/content/images/#responsive-images)
+vertical centering by flex (https://getbootstrap.com/docs/5.0/utilities/flex/)
+class="row", alada kore mui er Row ana lagbe na 
+getting color codes from image(https://html-color-codes.info/colors-from-image/)
+Different background-color for left and right half of div(https://stackoverflow.com/questions/1277339/different-background-color-for-left-and-right-half-of-div)
+z-index:this provids a third axis which is z-axis. Give a value of "z-index:-50px" (https://getbootstrap.com/docs/5.0/layout/z-index/)
+text-white,text-dark ei class gula valo help kore
+props hishebe pathanor somoy style ke kivabe dynamic kore seta janlam BusinessInfo korar somoy
+sizing(width & height) can be done easily(https://getbootstrap.com/docs/5.0/utilities/sizing/)
+image ke jokhon data hishebe/props hishebe send kora hoy, then seta ke amra normally imgur diye kori. chaile upore import kore pore data-r moddhe dhukaye deya jay
+transform use kora css style er moddhe
+opacity use kora background image er moddhe
+year auto update korar jonno {(new Date()).getFullYear()}, abar new Date() can be used anywhere to indicate today's date 
