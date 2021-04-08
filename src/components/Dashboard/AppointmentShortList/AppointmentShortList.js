@@ -1,29 +1,29 @@
-// import React from 'react';
+import React from 'react';
 
-// const AppointmentShortList = ({appointments}) => {
-//     return (
-//         <table className="table table-borderless">
-//             <thead>
-//                 <tr>
-//                 <th className="text-secondary" scope="col">Name</th>
-//                 <th className="text-secondary" scope="col">Phone</th>
-//                 <th className="text-secondary" scope="col">Email</th>
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 {
-//                   appointments.map((appointment, index) => 
+const AppointmentShortList = ({appointments}) => {
+    return (
+        <table className="table table-borderless">
+            <thead>
+                <tr>
+                <th className="text-secondary" scope="col">Name</th>
+                <th className="text-secondary" scope="col">Phone</th>
+                <th className="text-secondary" scope="col">Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                  appointments.map((appointment) => 
                         
-//                     <tr>
-//                         <td>{appointment.name}</td>
-//                         <td>{appointment.phone}</td>
-//                         <td>{appointment.email}</td>
-//                     </tr>
-//                     )
-//                 }
-//             </tbody>
-//         </table>
-//     );
-// };
+                    <tr>
+                        <td><b>{appointment.name}</b></td>
+                        <td><b>{appointment.phone}</b></td>
+                        <td><b>{appointment.service}</b></td>
+                    </tr>
+                    )
+                }
+            </tbody>
+        </table>
+    );
+};
 
-// export default AppointmentShortList;
+export default AppointmentShortList;
