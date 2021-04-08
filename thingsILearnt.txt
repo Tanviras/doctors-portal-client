@@ -14,3 +14,4 @@ image ke jokhon data hishebe/props hishebe send kora hoy, then seta ke amra norm
 transform use kora css style er moddhe
 opacity use kora background image er moddhe
 year auto update korar jonno {(new Date()).getFullYear()}, abar new Date() can be used anywhere to indicate today's date 
+class="container-fluid" is used when you are sure to use the FULL width of your screen , whereas class="container" indicates the responsive FIXED width container

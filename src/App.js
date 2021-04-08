@@ -8,6 +8,7 @@ import {
 import Home from './components/Home/Home/Home';
 import Appointment from './components/Appointment/Appointment/Appointment';
 import Login from './components/Login/Login/Login';
+import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import AllPatients from './components/AllPatients/AllPatients/AllPatients';
 import AddDoctor from './components/AddDoctor/AddDoctor';
@@ -23,9 +24,9 @@ function App() {
           <Route path="/appointment">
             <Appointment></Appointment>
           </Route>
-          {/* <PrivateRoute path="/dashboard">
+          <Route path="/dashboard">
             <Dashboard></Dashboard>
-          </PrivateRoute> */}
+          </Route>
           <PrivateRoute path="/allPatients">
             <AllPatients></AllPatients>
           </PrivateRoute>
