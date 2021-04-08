@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import AllPatients from './components/AllPatients/AllPatients/AllPatients';
 import AddDoctor from './components/AddDoctor/AddDoctor';
+import Prescriptions from './components/Prescriptions/Prescriptions';
 
 export const UserContext = createContext();
 
@@ -27,11 +28,14 @@ function App() {
           <Route path="/dashboard">
             <Dashboard></Dashboard>
           </Route>
-          <PrivateRoute path="/allPatients">
+          <Route path="/allPatients">
             <AllPatients></AllPatients>
-          </PrivateRoute>
+          </Route>
           <Route path="/addDoctor">
             <AddDoctor></AddDoctor>
+          </Route>
+          <Route path="/prescriptions">
+            <Prescriptions></Prescriptions>
           </Route>
           <Route path="/login">
             <Login></Login>
