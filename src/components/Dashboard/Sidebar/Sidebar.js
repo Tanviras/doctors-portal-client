@@ -10,15 +10,15 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isDoctor, setIsDoctor] = useState(false);
 
-    // useEffect(() => {
-    //     fetch('https://salty-plateau-71286.herokuapp.com/isDoctor', {
-    //         method: 'POST',
-    //         headers: { 'content-type': 'application/json' },
-    //         body: JSON.stringify({ email: loggedInUser.email })
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => setIsDoctor(data));
-    // }, [])
+    useEffect(() => {
+        fetch('http://localhost:5000/isDoctor', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ email: loggedInUser.email })//backend theke email ta peye jabe
+        })
+            .then(res => res.json())
+            .then(data => setIsDoctor(data));
+    }, [])
 
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
@@ -36,8 +36,10 @@ const Sidebar = () => {
                     </Link>
                 </li>
 
-                {/* {isDoctor && <div> */}
-                <div> 
+
+
+               {/* conditional show of sidebar */}
+                {isDoctor && <div> 
                     <li>
                         <Link to="/dashboard" className="text-white">
                             <FontAwesomeIcon icon={faCalendar} /> <span>Appointments</span>
@@ -64,6 +66,7 @@ const Sidebar = () => {
                         </Link>
                     </li>
                 </div>
+                }
                 
             </ul>
             <div>

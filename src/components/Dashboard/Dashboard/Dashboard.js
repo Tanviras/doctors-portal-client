@@ -25,7 +25,7 @@ const Dashboard = () => {
         fetch('http://localhost:5000/appointmentsByDate', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({date:selectedDate})
+            body: JSON.stringify({date:selectedDate,email:loggedInUser})//appointments dekhar somoy kon date er email dekhte chai seta ditam, ekhon email dicchi
         })
             .then(res => res.json())
             .then(data => setAppointments(data))
