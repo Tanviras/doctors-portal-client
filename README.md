@@ -20,39 +20,15 @@ Doctors-portal-client is a working front-end application that can meet the neces
 
 
 
-### `npm start`
-
-
-
-### `npm test`
-
-
-
-### `npm run build`
-
-
-
-### `npm run eject`
-
-
-## Learn More
-
-### Code Splitting
-
-
-### Analyzing the Bundle Size
-
-
-
-### Making a Progressive Web App
-
-
-### Advanced Configuration
-
-
-### Deployment
-
-
-### `npm run build` fails to minify
-
+## Technologies
+- ReactJs
+- React Router
+- React Form
+- React Calendar
+- React Modal
+- JWT Decode
+- Firebase Authentication
+- Bootstrap
+- HTML
+- CSS
 
