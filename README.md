@@ -3,11 +3,11 @@ Doctors-portal-client is a working front-end application that can meet the neces
 
 ## Main Features
 ## As a patient
-A patient can select a date to get service from a calender.
-After selecting an appointment date, he will see the available treatment services on that selected date.
-Once the treatment service is selected, a modal will come up to take basic information(Name,age,weight,gender etc.) of the patients.
-After filling-up the modal, the modal would be gone from sight and the appointment page will be seen again.
-From dashboard,the patient can see the appointments he has booked earlier connected to his logged in email.
+1. A patient can select a date to get service from a calender.
+2. After selecting an appointment date, he will see the available treatment services on that selected date.
+3. Once the treatment service is selected, a modal will come up to take basic information(Name,age,weight,gender etc.) of the patients.
+4. After filling-up the modal, the modal would be gone from sight and the appointment page will be seen again.
+5. From dashboard,the patient can see the appointments he has booked earlier connected to his logged in email.
       
 ## As a doctor         
 1. After logging in as a doctor with an email,the doctor can see,add and remove many more things which a patient can not
