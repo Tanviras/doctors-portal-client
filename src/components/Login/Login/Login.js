@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -12,18 +12,29 @@ const Login = () => {
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
+    var [user, setUser] = useState({
+      name: '',
+      email: ''
+    });
 
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
       }
+
       const provider = new firebase.auth.GoogleAuthProvider();
+
       const handleGoogleSignIn = () => {
         firebase
           .auth()
           .signInWithPopup(provider)
           .then(function (result) {
             const { displayName, email } = result.user;
-            const signedInUser = { name: displayName, email };
+            const signedInUser = { 
+              name: displayName, 
+              // email
+              email:email,
+             };
+
             setLoggedInUser(signedInUser);
             // history.replace(from);
             storeAuthToken();
@@ -45,7 +56,6 @@ const Login = () => {
       .then(function (idToken) {
         // console.log(idToken);
         //got our id token while log in
-        //you can decode it online to see what are in there in the token
 
         //now store the token in session storage
         sessionStorage.setItem('token', idToken);
@@ -54,6 +64,8 @@ const Login = () => {
         // Handle error
       });
   }
+
+
 
   return (
     <div className="login-page container">

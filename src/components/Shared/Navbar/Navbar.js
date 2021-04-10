@@ -1,7 +1,34 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+import { UserContext } from '../../../App';
+import firebase from "firebase/app";
+import "firebase/auth";
+import firebaseConfig from '../../Login/Login/firebase.config';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    if(firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    
+    const handleSignOut = () => {
+        return firebase.auth().signOut()
+        .then(res => {
+          const signedOutUser = {
+            name: '',
+            email: '',
+          }
+         setLoggedInUser(signedOutUser);//loggedInUser change korlam
+         sessionStorage.removeItem('token');//sessionStorage khali korlam, duitai korlam karon jekono ekta thaklei seta diye dhuke jawa jabe onno page a without re-login
+        }).catch(err => {
+          // An error happened.
+        });
+      }
+
+      
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
 
@@ -27,7 +54,10 @@ const Navbar = () => {
                         <Link className="nav-link mr-5 text-white" to="#">Blogs</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link mr-5 text-white" to="#">Contact Us</Link>
+                        <Link className="nav-link mr-5 text-white" to="/">
+                            <FontAwesomeIcon icon={faSignOutAlt}/>
+                            <span onClick={handleSignOut}>Sign out</span>
+                        </Link>
                     </li>
                 </ul>
             </div>
